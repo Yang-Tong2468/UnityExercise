@@ -9,6 +9,7 @@ public class Bee : Enemy
     {
         base.Awake();
         patrolState = new BeePatrolState();
+        chaseState = new BeeChaseState();
     }
 
     public override bool FoundPlayer(){

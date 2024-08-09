@@ -36,7 +36,7 @@ public class BeePatrolState : BaseState
     public override void PhysicsUpdate()
     {
         if(!currentEnemy.wait && !currentEnemy.isHurt && !currentEnemy.isDead){
-            currentEnemy.rg.velocity = moveDir * currentEnemy.chaseSpeed *Time.deltaTime;
+            currentEnemy.rg.velocity = moveDir * currentEnemy.currentSpeed *Time.deltaTime;
         }else{
             currentEnemy.rg.velocity = Vector2.zero;
         }
